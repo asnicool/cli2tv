@@ -3,7 +3,7 @@ package devicecolors
 import (
 	"image/color"
 
-	"go2tv.app/go2tv/v2/devices"
+	"cli2tv/devices"
 )
 
 type Palette struct {

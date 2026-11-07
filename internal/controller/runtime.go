@@ -5,8 +5,8 @@ import (
 	"io"
 	"time"
 
-	"go2tv.app/go2tv/v2/internal/playback"
-	"go2tv.app/go2tv/v2/internal/playbackadapter"
+	"cli2tv/internal/playback"
+	"cli2tv/internal/playbackadapter"
 )
 
 // RuntimeConfig composes production protocol adapters without server/UI wiring.

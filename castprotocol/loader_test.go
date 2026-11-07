@@ -5,9 +5,9 @@ import (
 	"sync/atomic"
 	"testing"
 
-	"go2tv.app/go2tv/v2/castprotocol/v2/cast"
-	castproto "go2tv.app/go2tv/v2/castprotocol/v2/cast/proto"
-	"go2tv.app/go2tv/v2/metadata"
+	"cli2tv/castprotocol/v2/cast"
+	castproto "cli2tv/castprotocol/v2/cast/proto"
+	"cli2tv/metadata"
 )
 
 type payloadCaptureConn struct {

@@ -14,8 +14,8 @@ import (
 	"testing"
 	"time"
 
-	"go2tv.app/go2tv/v2/internal/radiometadata"
-	"go2tv.app/go2tv/v2/soapcalls"
+	"cli2tv/internal/radiometadata"
+	"cli2tv/soapcalls"
 )
 
 func TestRadioDeliversSmallChunksBeforeUpstreamEnds(t *testing.T) {

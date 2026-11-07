@@ -5,8 +5,8 @@ import (
 	"log/slog"
 	"sync"
 
-	"go2tv.app/go2tv/v2/internal/logging"
-	"go2tv.app/go2tv/v2/internal/mediasource"
+	"cli2tv/internal/logging"
+	"cli2tv/internal/mediasource"
 )
 
 // TranscodeOptions holds shared FFmpeg transcoding configuration for both

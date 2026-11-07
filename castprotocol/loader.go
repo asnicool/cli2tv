@@ -5,8 +5,8 @@ import (
 	"strings"
 	"sync/atomic"
 
-	"go2tv.app/go2tv/v2/castprotocol/v2/cast"
-	"go2tv.app/go2tv/v2/metadata"
+	"cli2tv/castprotocol/v2/cast"
+	"cli2tv/metadata"
 )
 
 // Request ID counter for Chromecast messages

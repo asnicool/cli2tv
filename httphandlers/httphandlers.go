@@ -17,10 +17,10 @@ import (
 	"sync"
 	"time"
 
-	"go2tv.app/go2tv/v2/internal/mediasource"
-	"go2tv.app/go2tv/v2/internal/radiometadata"
-	"go2tv.app/go2tv/v2/soapcalls"
-	"go2tv.app/go2tv/v2/utils"
+	"cli2tv/internal/mediasource"
+	"cli2tv/internal/radiometadata"
+	"cli2tv/soapcalls"
+	"cli2tv/utils"
 )
 
 // HTTPserver - new http.Server instance.

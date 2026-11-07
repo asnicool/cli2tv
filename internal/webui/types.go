@@ -3,8 +3,8 @@ package webui
 import (
 	"encoding/json"
 
-	"go2tv.app/go2tv/v2/internal/controller"
-	"go2tv.app/go2tv/v2/internal/library"
+	"cli2tv/internal/controller"
+	"cli2tv/internal/library"
 )
 
 const ProtocolVersion = 1

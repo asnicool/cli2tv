@@ -11,8 +11,8 @@ import (
 
 	"github.com/pkg/errors"
 
-	"go2tv.app/go2tv/v2/metadata"
-	"go2tv.app/go2tv/v2/utils"
+	"cli2tv/metadata"
+	"cli2tv/utils"
 )
 
 var ErrSetMuteInput = errors.New("setMuteSoapBuild input error. Was expecting 0 or 1.")

@@ -11,7 +11,7 @@ import (
 
 	"github.com/gdamore/tcell/v2"
 	"github.com/mattn/go-runewidth"
-	"go2tv.app/go2tv/v2/soapcalls"
+	"cli2tv/soapcalls"
 )
 
 // NewScreen .

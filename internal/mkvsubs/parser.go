@@ -10,7 +10,7 @@ import (
 	"strings"
 	"unicode/utf8"
 
-	"go2tv.app/go2tv/v2/internal/mediasource"
+	"cli2tv/internal/mediasource"
 )
 
 const (

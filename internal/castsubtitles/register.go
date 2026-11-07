@@ -4,10 +4,10 @@ import (
 	"context"
 	"fmt"
 
-	"go2tv.app/go2tv/v2/httphandlers"
-	"go2tv.app/go2tv/v2/internal/mediasource"
-	"go2tv.app/go2tv/v2/internal/playback"
-	"go2tv.app/go2tv/v2/utils"
+	"cli2tv/httphandlers"
+	"cli2tv/internal/mediasource"
+	"cli2tv/internal/playback"
+	"cli2tv/utils"
 )
 
 type Options struct {

@@ -22,29 +22,30 @@ import (
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/charmbracelet/lipgloss"
 
-	buildinfo "go2tv.app/go2tv/v2"
-	"go2tv.app/go2tv/v2/castprotocol"
-	"go2tv.app/go2tv/v2/devices"
-	"go2tv.app/go2tv/v2/httphandlers"
-	"go2tv.app/go2tv/v2/internal/castsubtitles"
-	"go2tv.app/go2tv/v2/internal/cliartwork"
-	"go2tv.app/go2tv/v2/internal/crashlog"
-	"go2tv.app/go2tv/v2/internal/devicecolors"
-	"go2tv.app/go2tv/v2/internal/gui"
-	"go2tv.app/go2tv/v2/internal/interactive"
-	"go2tv.app/go2tv/v2/internal/playback"
-	"go2tv.app/go2tv/v2/internal/servermode"
-	"go2tv.app/go2tv/v2/internal/torrentstream"
-	"go2tv.app/go2tv/v2/metadata"
-	"go2tv.app/go2tv/v2/soapcalls"
-	"go2tv.app/go2tv/v2/utils"
+	buildinfo "cli2tv"
+	"cli2tv/castprotocol"
+	"cli2tv/devices"
+	"cli2tv/httphandlers"
+	"cli2tv/internal/castsubtitles"
+	"cli2tv/internal/cliartwork"
+	"cli2tv/internal/crashlog"
+	"cli2tv/internal/devicecolors"
+	"cli2tv/internal/interactive"
+	"cli2tv/internal/playback"
+	"cli2tv/internal/servermode"
+	"cli2tv/internal/torrentstream"
+	"cli2tv/metadata"
+	"cli2tv/soapcalls"
+	"cli2tv/utils"
 )
 
 var (
-	version               = buildinfo.Version()
-	mediaArg              = flag.String("v", "", "Path to media or .torrent file (triggers CLI mode).")
-	urlArg                = flag.String("u", "", "Media URL or magnet link (triggers CLI mode).")
-	torrentFileArg        = flag.Int("torrent-file", -1, "Media file index within torrent; omitted for single-media torrents.")
+	version        = buildinfo.Version()
+	errNoflag      = errors.New("no flag used")
+	mediaArg       = flag.String("v", "", "Path to media or .torrent file (triggers CLI mode).")
+	urlArg         = flag.String("u", "", "Media URL or magnet link (triggers CLI mode).")
+	torrentFileArg = flag.Int("torrent-file", -1, "Media file index within torrent; omitted for single-media torrents.")
+
 	subsArg               = flag.String("s", "", "Path to subtitles file (.srt, .vtt, .ass or .ssa).")
 	targetPtr             = flag.String("t", "", "Device URL to cast to (from -l output).")
 	transcodePtr          = flag.Bool("tc", false, "Force transcoding with ffmpeg.")
@@ -61,11 +62,10 @@ var (
 type flagResults struct {
 	targetURL string // Device URL (DLNA renderer or Chromecast)
 	exit      bool
-	gui       bool
 }
 
 func main() {
-	crash, err := crashlog.Init("go2tv")
+	crash, err := crashlog.Init("cli2tv")
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Warning: crash logging disabled: %v\n", err)
 	}
@@ -78,6 +78,11 @@ func main() {
 	}
 
 	if runErr != nil {
+		if errors.Is(runErr, errNoflag) {
+			flag.Usage()
+			os.Exit(0)
+		}
+
 		fmt.Fprintf(os.Stderr, "Encountered error(s): %s\n", runErr)
 		os.Exit(1)
 	}
@@ -111,7 +116,7 @@ func run(crash *crashlog.Session) error {
 		return nil
 	}
 
-	if !flagRes.gui && crash != nil && crash.PreviousCrashPath() != "" {
+	if crash != nil && crash.PreviousCrashPath() != "" {
 		fmt.Fprintf(os.Stderr, "Previous crash report: %s\n", crash.PreviousCrashPath())
 	}
 
@@ -199,12 +204,6 @@ func run(crash *crashlog.Session) error {
 
 	if isChromecastTarget && *mediaArg == "" && *urlArg != "" && !torrentInput {
 		transcode = playback.ChromecastTranscodeEnabled(transcode, *urlArg, mediaType)
-	}
-
-	if flagRes.gui {
-		scr := gui.NewFyneScreen(version, crash)
-		gui.Start(exitCTX, scr)
-		return nil
 	}
 
 	switch t := mediaFile.(type) {
@@ -586,9 +585,8 @@ func processflags() (*flagResults, error) {
 		return res, nil
 	}
 
-	if checkGUI() {
-		res.gui = true
-		return res, nil
+	if *mediaArg == "" && !*listPtr && *urlArg == "" && !checkStdin() {
+		return nil, fmt.Errorf("checkflags error: %w", errNoflag)
 	}
 
 	if err := checkTCflag(); err != nil {
@@ -696,14 +694,10 @@ func checkLflag() (bool, error) {
 
 func checkVerflag() bool {
 	if *versionPtr && os.Args[1] == "-version" {
-		fmt.Printf("Go2TV Version: %s\n", version)
+		fmt.Printf("cli2tv Version: %s\n", version)
 		return true
 	}
 	return false
-}
-
-func checkGUI() bool {
-	return *mediaArg == "" && !*listPtr && *urlArg == "" && !checkStdin()
 }
 
 func checkStdin() bool {

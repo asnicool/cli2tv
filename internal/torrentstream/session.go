@@ -21,7 +21,7 @@ import (
 	"github.com/anacrolix/torrent/metainfo"
 	"github.com/anacrolix/torrent/storage"
 
-	"go2tv.app/go2tv/v2/internal/mediasource"
+	"cli2tv/internal/mediasource"
 )
 
 const readahead = 8 << 20

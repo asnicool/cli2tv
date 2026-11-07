@@ -6,7 +6,7 @@ import (
 	"io"
 	"net/http"
 
-	"go2tv.app/go2tv/v2/castprotocol/v2/cast"
+	"cli2tv/castprotocol/v2/cast"
 )
 
 // getInfo uses the http://<ip>:8008/setup/eureka_endpoint to obtain more

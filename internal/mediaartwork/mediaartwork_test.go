@@ -11,7 +11,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"go2tv.app/go2tv/v2/internal/mediamodel"
+	"cli2tv/internal/mediamodel"
 )
 
 func TestThumbnailReusesGUICompatibleCache(t *testing.T) {

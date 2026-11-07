@@ -12,8 +12,8 @@ import "sync"
 // process: it stops the Wi-Fi chip filtering in hardware, so holding it while
 // nothing is listening costs power for no benefit.
 //
-// Taking it needs refyne's driver, and this package stays clear of the GUI
-// toolkit because cmd/go2tv-lite imports it, so the caller registers the hook.
+// Taking it needs a driver hook, and this package stays clear of any GUI
+// toolkit because cmd/cli2tv imports it, so the caller registers the hook.
 var (
 	multicastMu      sync.RWMutex
 	multicastAcquire func()

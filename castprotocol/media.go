@@ -1,6 +1,6 @@
 package castprotocol
 
-import "go2tv.app/go2tv/v2/metadata"
+import "cli2tv/metadata"
 
 // LoadRequest describes one media load, including protocol-neutral metadata.
 type LoadRequest struct {

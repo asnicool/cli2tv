@@ -16,7 +16,7 @@ import (
 
 	"github.com/go-viper/mapstructure/v2"
 
-	"go2tv.app/go2tv/v2/internal/mkvsubs"
+	"cli2tv/internal/mkvsubs"
 )
 
 type ffprobeInfoforSubs struct {

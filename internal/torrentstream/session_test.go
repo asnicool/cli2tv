@@ -19,9 +19,9 @@ import (
 	"github.com/anacrolix/torrent/storage"
 	"golang.org/x/time/rate"
 
-	"go2tv.app/go2tv/v2/httphandlers"
-	"go2tv.app/go2tv/v2/internal/mediasource"
-	"go2tv.app/go2tv/v2/soapcalls"
+	"cli2tv/httphandlers"
+	"cli2tv/internal/mediasource"
+	"cli2tv/soapcalls"
 )
 
 // Discovery is disabled: tests exchange data only between explicit local peers.

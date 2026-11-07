@@ -16,7 +16,7 @@ import (
 	"time"
 
 	"github.com/gogo/protobuf/proto"
-	pb "go2tv.app/go2tv/v2/castprotocol/v2/cast/proto"
+	pb "cli2tv/castprotocol/v2/cast/proto"
 )
 
 func TestStartContextCancelsStalledTLSHandshake(t *testing.T) {

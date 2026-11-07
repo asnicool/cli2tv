@@ -19,9 +19,9 @@ import (
 	"sync"
 	"time"
 
-	"go2tv.app/go2tv/v2/internal/mediamodel"
-	"go2tv.app/go2tv/v2/metadata"
-	"go2tv.app/go2tv/v2/utils"
+	"cli2tv/internal/mediamodel"
+	"cli2tv/metadata"
+	"cli2tv/utils"
 	"golang.org/x/image/draw"
 )
 

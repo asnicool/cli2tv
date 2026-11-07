@@ -15,12 +15,12 @@ import (
 	"sync/atomic"
 	"time"
 
-	"go2tv.app/go2tv/v2/httphandlers"
-	"go2tv.app/go2tv/v2/internal/mediamodel"
-	"go2tv.app/go2tv/v2/internal/playback"
-	"go2tv.app/go2tv/v2/internal/radiometadata"
-	"go2tv.app/go2tv/v2/metadata"
-	"go2tv.app/go2tv/v2/utils"
+	"cli2tv/httphandlers"
+	"cli2tv/internal/mediamodel"
+	"cli2tv/internal/playback"
+	"cli2tv/internal/radiometadata"
+	"cli2tv/metadata"
+	"cli2tv/utils"
 )
 
 const (

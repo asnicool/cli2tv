@@ -18,12 +18,12 @@ import (
 	"github.com/anacrolix/torrent/bencode"
 	"github.com/anacrolix/torrent/metainfo"
 
-	"go2tv.app/go2tv/v2/internal/controller"
-	"go2tv.app/go2tv/v2/internal/library"
-	"go2tv.app/go2tv/v2/internal/mediamodel"
-	"go2tv.app/go2tv/v2/internal/mediaserver"
-	"go2tv.app/go2tv/v2/internal/mediasource"
-	"go2tv.app/go2tv/v2/internal/playback"
+	"cli2tv/internal/controller"
+	"cli2tv/internal/library"
+	"cli2tv/internal/mediamodel"
+	"cli2tv/internal/mediaserver"
+	"cli2tv/internal/mediasource"
+	"cli2tv/internal/playback"
 )
 
 func webTorrentFixture(t *testing.T, movieName ...string) []byte {

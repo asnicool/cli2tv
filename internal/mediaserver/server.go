@@ -18,10 +18,10 @@ import (
 	"time"
 	"unicode"
 
-	"go2tv.app/go2tv/v2/internal/mkvsubs"
-	"go2tv.app/go2tv/v2/internal/playback"
-	"go2tv.app/go2tv/v2/internal/radiometadata"
-	"go2tv.app/go2tv/v2/utils"
+	"cli2tv/internal/mkvsubs"
+	"cli2tv/internal/playback"
+	"cli2tv/internal/radiometadata"
+	"cli2tv/utils"
 )
 
 const tokenBytes = 32

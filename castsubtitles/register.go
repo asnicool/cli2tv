@@ -6,10 +6,10 @@ import (
 	"context"
 	"net/http"
 
-	"go2tv.app/go2tv/v2/httphandlers"
-	internal "go2tv.app/go2tv/v2/internal/castsubtitles"
-	"go2tv.app/go2tv/v2/internal/mkvsubs"
-	"go2tv.app/go2tv/v2/mediasource"
+	"cli2tv/httphandlers"
+	internal "cli2tv/internal/castsubtitles"
+	"cli2tv/internal/mkvsubs"
+	"cli2tv/mediasource"
 )
 
 // Options configures subtitle selection, conversion, and playback timing.

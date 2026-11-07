@@ -8,10 +8,10 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/mock"
-	"go2tv.app/go2tv/v2/castprotocol/v2/application"
-	"go2tv.app/go2tv/v2/castprotocol/v2/cast"
-	mockCast "go2tv.app/go2tv/v2/castprotocol/v2/cast/mocks"
-	pb "go2tv.app/go2tv/v2/castprotocol/v2/cast/proto"
+	"cli2tv/castprotocol/v2/application"
+	"cli2tv/castprotocol/v2/cast"
+	mockCast "cli2tv/castprotocol/v2/cast/mocks"
+	pb "cli2tv/castprotocol/v2/cast/proto"
 )
 
 var (

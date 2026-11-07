@@ -1,8 +1,8 @@
 package cliartwork
 
 import (
-	"go2tv.app/go2tv/v2/httphandlers"
-	"go2tv.app/go2tv/v2/metadata"
+	"cli2tv/httphandlers"
+	"cli2tv/metadata"
 )
 
 // Prepare resolves local media artwork and registers it before server start.

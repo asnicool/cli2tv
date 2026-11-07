@@ -17,7 +17,7 @@ import (
 	"github.com/gogo/protobuf/proto"
 	"github.com/pkg/errors"
 
-	pb "go2tv.app/go2tv/v2/castprotocol/v2/cast/proto"
+	pb "cli2tv/castprotocol/v2/cast/proto"
 )
 
 const (

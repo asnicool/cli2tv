@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"go2tv.app/go2tv/v2/internal/controller"
+	"cli2tv/internal/controller"
 )
 
 type countingSnapshotController struct {

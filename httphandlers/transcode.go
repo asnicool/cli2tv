@@ -7,7 +7,7 @@ import (
 	"net/url"
 	"os/exec"
 
-	"go2tv.app/go2tv/v2/utils"
+	"cli2tv/utils"
 )
 
 // TranscodeStatus distinguishes slow preparation from an encoder failure.

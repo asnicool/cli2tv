@@ -11,7 +11,7 @@ import (
 	"strings"
 	"time"
 
-	"go2tv.app/go2tv/v2/internal/mediasource"
+	"cli2tv/internal/mediasource"
 )
 
 // AudioTranscodeMediaType matches the ADTS stream emitted by the native AAC

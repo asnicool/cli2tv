@@ -12,7 +12,7 @@ import (
 	"syscall"
 	"time"
 
-	"go2tv.app/go2tv/v2/internal/managedsession"
+	"cli2tv/internal/managedsession"
 )
 
 // managedHandshakeTimeout bounds the wait for the parent's initial discovery

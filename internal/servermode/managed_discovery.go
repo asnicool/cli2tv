@@ -12,8 +12,8 @@ import (
 	"strconv"
 	"sync"
 
-	"go2tv.app/go2tv/v2/internal/managedsession"
-	"go2tv.app/go2tv/v2/internal/playback"
+	"cli2tv/internal/managedsession"
+	"cli2tv/internal/playback"
 )
 
 // Refresh errors surfaced to the controller/WebUI use stable text only.

@@ -15,10 +15,10 @@ import (
 	"sync/atomic"
 	"time"
 
-	"go2tv.app/go2tv/v2/castprotocol/v2/application"
-	"go2tv.app/go2tv/v2/castprotocol/v2/cast"
-	"go2tv.app/go2tv/v2/internal/logging"
-	"go2tv.app/go2tv/v2/metadata"
+	"cli2tv/castprotocol/v2/application"
+	"cli2tv/castprotocol/v2/cast"
+	"cli2tv/internal/logging"
+	"cli2tv/metadata"
 )
 
 // CastClient wraps go-chromecast Application for simplified API

@@ -4,9 +4,9 @@ import (
 	"path/filepath"
 	"strings"
 
-	"go2tv.app/go2tv/v2/httphandlers"
-	"go2tv.app/go2tv/v2/internal/mediasource"
-	"go2tv.app/go2tv/v2/internal/mkvsubs"
+	"cli2tv/httphandlers"
+	"cli2tv/internal/mediasource"
+	"cli2tv/internal/mkvsubs"
 )
 
 // RegisterTorrent exposes progressive embedded text only for registered torrent

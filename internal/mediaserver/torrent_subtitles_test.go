@@ -9,8 +9,8 @@ import (
 	"os"
 	"testing"
 
-	"go2tv.app/go2tv/v2/internal/mkvsubs"
-	"go2tv.app/go2tv/v2/internal/playback"
+	"cli2tv/internal/mkvsubs"
+	"cli2tv/internal/playback"
 )
 
 type captionSource struct{ data []byte }

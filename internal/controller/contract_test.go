@@ -9,8 +9,8 @@ import (
 	"testing"
 	"time"
 
-	"go2tv.app/go2tv/v2/internal/mediamodel"
-	"go2tv.app/go2tv/v2/internal/playback"
+	"cli2tv/internal/mediamodel"
+	"cli2tv/internal/playback"
 )
 
 func TestErrorContract(t *testing.T) {

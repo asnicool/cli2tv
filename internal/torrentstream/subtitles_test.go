@@ -16,8 +16,8 @@ import (
 	"github.com/anacrolix/torrent/storage"
 	"golang.org/x/time/rate"
 
-	"go2tv.app/go2tv/v2/internal/mediasource"
-	"go2tv.app/go2tv/v2/internal/mkvsubs"
+	"cli2tv/internal/mediasource"
+	"cli2tv/internal/mkvsubs"
 )
 
 func TestSubtitlesBeforeTorrentCompletes(t *testing.T) {

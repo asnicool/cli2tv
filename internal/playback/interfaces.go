@@ -5,8 +5,8 @@ import (
 	"io"
 	"time"
 
-	"go2tv.app/go2tv/v2/internal/mediasource"
-	"go2tv.app/go2tv/v2/metadata"
+	"cli2tv/internal/mediasource"
+	"cli2tv/metadata"
 )
 
 // Device is a renderer safe to expose outside discovery. Endpoint is transport-only.

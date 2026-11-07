@@ -19,10 +19,10 @@ import (
 
 	"github.com/pkg/errors"
 
-	"go2tv.app/go2tv/v2/internal/logging"
-	"go2tv.app/go2tv/v2/internal/mediasource"
-	"go2tv.app/go2tv/v2/metadata"
-	"go2tv.app/go2tv/v2/utils"
+	"cli2tv/internal/logging"
+	"cli2tv/internal/mediasource"
+	"cli2tv/metadata"
+	"cli2tv/utils"
 )
 
 type States struct {

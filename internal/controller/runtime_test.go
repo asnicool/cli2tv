@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	"go2tv.app/go2tv/v2/internal/playback"
+	"cli2tv/internal/playback"
 )
 
 type stubDiscovery struct{}

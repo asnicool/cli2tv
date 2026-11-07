@@ -15,8 +15,8 @@ import (
 	"testing"
 	"time"
 
-	"go2tv.app/go2tv/v2/soapcalls"
-	"go2tv.app/go2tv/v2/utils"
+	"cli2tv/soapcalls"
+	"cli2tv/utils"
 )
 
 func TestRetiredMediaCannotPublishTranscodeFailure(t *testing.T) {

@@ -15,7 +15,7 @@ import (
 
 	"github.com/alexballas/go-ssdp"
 	"github.com/pkg/errors"
-	"go2tv.app/go2tv/v2/soapcalls"
+	"cli2tv/soapcalls"
 )
 
 const (

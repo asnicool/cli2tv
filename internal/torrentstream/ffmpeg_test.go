@@ -19,8 +19,8 @@ import (
 	"github.com/anacrolix/torrent/storage"
 	"golang.org/x/time/rate"
 
-	"go2tv.app/go2tv/v2/internal/mediasource"
-	"go2tv.app/go2tv/v2/utils"
+	"cli2tv/internal/mediasource"
+	"cli2tv/utils"
 )
 
 // Real FFmpeg must seek through HTTP to unreceived torrent data. Counting

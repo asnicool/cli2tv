@@ -9,7 +9,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"go2tv.app/go2tv/v2/utils"
+	"cli2tv/utils"
 )
 
 // PrepareDLNASubtitles makes direct-play receiver captions available as SRT.

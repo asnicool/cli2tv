@@ -8,7 +8,7 @@ import (
 	"strings"
 	"time"
 
-	"go2tv.app/go2tv/v2/soapcalls"
+	"cli2tv/soapcalls"
 )
 
 const mediaStreamLogInterval = 30 * time.Second

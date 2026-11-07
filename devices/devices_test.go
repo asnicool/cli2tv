@@ -11,7 +11,7 @@ import (
 	"testing"
 
 	"github.com/alexballas/go-ssdp"
-	"go2tv.app/go2tv/v2/soapcalls"
+	"cli2tv/soapcalls"
 )
 
 func TestLoadSSDPServicesDetectsNonAVTransportST(t *testing.T) {

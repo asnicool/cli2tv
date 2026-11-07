@@ -5,7 +5,7 @@ import (
 	"context"
 	"io"
 
-	internal "go2tv.app/go2tv/v2/internal/torrentstream"
+	internal "cli2tv/internal/torrentstream"
 )
 
 // File describes selectable media, with its original torrent index.

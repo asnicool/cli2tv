@@ -17,7 +17,7 @@ import (
 	"testing"
 	"time"
 
-	"go2tv.app/go2tv/v2/internal/logging"
+	"cli2tv/internal/logging"
 )
 
 // Re-execute this test binary as FFmpeg: no shell or installed GPU required,

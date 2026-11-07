@@ -20,10 +20,10 @@ import (
 	"github.com/h2non/filetype"
 	"github.com/pkg/errors"
 	log "github.com/sirupsen/logrus"
-	"go2tv.app/go2tv/v2/castprotocol/v2/cast"
-	pb "go2tv.app/go2tv/v2/castprotocol/v2/cast/proto"
-	"go2tv.app/go2tv/v2/castprotocol/v2/playlists"
-	"go2tv.app/go2tv/v2/castprotocol/v2/storage"
+	"cli2tv/castprotocol/v2/cast"
+	pb "cli2tv/castprotocol/v2/cast/proto"
+	"cli2tv/castprotocol/v2/playlists"
+	"cli2tv/castprotocol/v2/storage"
 )
 
 var _ App = &Application{}

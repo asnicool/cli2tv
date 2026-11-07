@@ -14,9 +14,9 @@ import (
 	"strings"
 	"testing"
 
-	"go2tv.app/go2tv/v2/httphandlers"
-	"go2tv.app/go2tv/v2/internal/mediasource"
-	"go2tv.app/go2tv/v2/internal/mkvsubs"
+	"cli2tv/httphandlers"
+	"cli2tv/internal/mediasource"
+	"cli2tv/internal/mkvsubs"
 )
 
 type captionSource struct {

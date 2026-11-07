@@ -12,9 +12,9 @@ import (
 	"testing"
 	"time"
 
-	"go2tv.app/go2tv/v2/internal/mediamodel"
-	"go2tv.app/go2tv/v2/internal/playback"
-	"go2tv.app/go2tv/v2/metadata"
+	"cli2tv/internal/mediamodel"
+	"cli2tv/internal/playback"
+	"cli2tv/metadata"
 )
 
 type testReadSeekCloser struct{ *bytes.Reader }

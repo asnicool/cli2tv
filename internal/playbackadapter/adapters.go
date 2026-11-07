@@ -13,11 +13,11 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"go2tv.app/go2tv/v2/castprotocol"
-	"go2tv.app/go2tv/v2/devices"
-	"go2tv.app/go2tv/v2/httphandlers"
-	"go2tv.app/go2tv/v2/internal/playback"
-	"go2tv.app/go2tv/v2/soapcalls"
+	"cli2tv/castprotocol"
+	"cli2tv/devices"
+	"cli2tv/httphandlers"
+	"cli2tv/internal/playback"
+	"cli2tv/soapcalls"
 )
 
 const callbackQueueSize = 128

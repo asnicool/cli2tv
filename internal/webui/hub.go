@@ -16,7 +16,7 @@ import (
 	"time"
 
 	"github.com/gorilla/websocket"
-	"go2tv.app/go2tv/v2/internal/controller"
+	"cli2tv/internal/controller"
 )
 
 const (

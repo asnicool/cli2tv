@@ -24,10 +24,10 @@ import (
 	"time"
 
 	"github.com/gorilla/websocket"
-	"go2tv.app/go2tv/v2/internal/controller"
-	"go2tv.app/go2tv/v2/internal/library"
-	"go2tv.app/go2tv/v2/internal/playback"
-	"go2tv.app/go2tv/v2/metadata"
+	"cli2tv/internal/controller"
+	"cli2tv/internal/library"
+	"cli2tv/internal/playback"
+	"cli2tv/metadata"
 )
 
 func testHandler(t *testing.T) (*Handler, *library.Library, *controller.Controller, string) {

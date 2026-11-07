@@ -4,9 +4,9 @@ import (
 	"context"
 	"testing"
 
-	"go2tv.app/go2tv/v2/internal/mediamodel"
-	"go2tv.app/go2tv/v2/internal/mediasource"
-	"go2tv.app/go2tv/v2/internal/playback"
+	"cli2tv/internal/mediamodel"
+	"cli2tv/internal/mediasource"
+	"cli2tv/internal/playback"
 )
 
 func TestChromecastBurnFallbackPolicyOnLoad(t *testing.T) {

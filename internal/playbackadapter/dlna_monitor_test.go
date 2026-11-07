@@ -11,8 +11,8 @@ import (
 	"testing"
 	"time"
 
-	"go2tv.app/go2tv/v2/internal/playback"
-	"go2tv.app/go2tv/v2/soapcalls"
+	"cli2tv/internal/playback"
+	"cli2tv/soapcalls"
 )
 
 func TestDLNAPollPreservesSubscriptionLifetimeAndUnknownDuration(t *testing.T) {

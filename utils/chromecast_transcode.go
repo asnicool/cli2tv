@@ -10,7 +10,7 @@ import (
 	"strconv"
 	"strings"
 
-	"go2tv.app/go2tv/v2/internal/mediasource"
+	"cli2tv/internal/mediasource"
 )
 
 // escapeFFmpegPath escapes special characters in paths for FFmpeg filtergraph syntax.

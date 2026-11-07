@@ -11,9 +11,9 @@ import (
 	"testing"
 	"time"
 
-	"go2tv.app/go2tv/v2/internal/mediaserver"
-	"go2tv.app/go2tv/v2/internal/mediasource"
-	"go2tv.app/go2tv/v2/internal/playback"
+	"cli2tv/internal/mediaserver"
+	"cli2tv/internal/mediasource"
+	"cli2tv/internal/playback"
 )
 
 func subtitleTestOpener(text string) playback.SourceOpener {

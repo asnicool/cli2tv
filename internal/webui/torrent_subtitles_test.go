@@ -10,10 +10,10 @@ import (
 	"testing"
 	"time"
 
-	"go2tv.app/go2tv/v2/internal/controller"
-	"go2tv.app/go2tv/v2/internal/library"
-	"go2tv.app/go2tv/v2/internal/mediaserver"
-	"go2tv.app/go2tv/v2/internal/playback"
+	"cli2tv/internal/controller"
+	"cli2tv/internal/library"
+	"cli2tv/internal/mediaserver"
+	"cli2tv/internal/playback"
 )
 
 type captionTorrentTransport struct{ torrentTransport }

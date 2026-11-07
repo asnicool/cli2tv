@@ -5,7 +5,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"go2tv.app/go2tv/v2/utils"
+	"cli2tv/utils"
 )
 
 type ChromecastURLPolicy struct {

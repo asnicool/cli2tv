@@ -21,11 +21,11 @@ import (
 
 	"github.com/gorilla/websocket"
 
-	"go2tv.app/go2tv/v2/internal/controller"
-	"go2tv.app/go2tv/v2/internal/library"
-	"go2tv.app/go2tv/v2/internal/mediaserver"
-	"go2tv.app/go2tv/v2/internal/playback"
-	"go2tv.app/go2tv/v2/internal/radiobrowser"
+	"cli2tv/internal/controller"
+	"cli2tv/internal/library"
+	"cli2tv/internal/mediaserver"
+	"cli2tv/internal/playback"
+	"cli2tv/internal/radiobrowser"
 )
 
 const testStationID = "9617a958-0601-11e8-ae97-52543be04c81"

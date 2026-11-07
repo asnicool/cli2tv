@@ -1,4 +1,4 @@
-package go2tv
+package cli2tv
 
 import (
 	_ "embed"

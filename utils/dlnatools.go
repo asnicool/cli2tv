@@ -11,7 +11,7 @@ import (
 
 	"github.com/h2non/filetype"
 
-	"go2tv.app/go2tv/v2/internal/mediasource"
+	"cli2tv/internal/mediasource"
 )
 
 var (

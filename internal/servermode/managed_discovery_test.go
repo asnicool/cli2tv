@@ -9,7 +9,7 @@ import (
 	"testing"
 	"time"
 
-	"go2tv.app/go2tv/v2/internal/managedsession"
+	"cli2tv/internal/managedsession"
 )
 
 func wireDevice(name, endpoint string) managedsession.Device {

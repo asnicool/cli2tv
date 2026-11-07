@@ -21,12 +21,12 @@ import (
 	"golang.org/x/text/language"
 	"golang.org/x/text/language/display"
 
-	"go2tv.app/go2tv/v2/internal/controller"
-	"go2tv.app/go2tv/v2/internal/mediaartwork"
-	"go2tv.app/go2tv/v2/internal/mediamodel"
-	"go2tv.app/go2tv/v2/internal/radiobrowser"
-	"go2tv.app/go2tv/v2/metadata"
-	"go2tv.app/go2tv/v2/utils"
+	"cli2tv/internal/controller"
+	"cli2tv/internal/mediaartwork"
+	"cli2tv/internal/mediamodel"
+	"cli2tv/internal/radiobrowser"
+	"cli2tv/metadata"
+	"cli2tv/utils"
 )
 
 const (

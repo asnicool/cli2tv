@@ -9,7 +9,7 @@ import (
 
 	"github.com/gdamore/tcell/v2"
 	"github.com/mattn/go-runewidth"
-	"go2tv.app/go2tv/v2/castprotocol"
+	"cli2tv/castprotocol"
 )
 
 // ChromecastScreen handles interactive CLI for Chromecast devices.

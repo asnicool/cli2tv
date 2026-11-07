@@ -8,9 +8,9 @@ import (
 	"strings"
 	"time"
 
-	"go2tv.app/go2tv/v2/internal/mediasource"
-	"go2tv.app/go2tv/v2/metadata"
-	"go2tv.app/go2tv/v2/utils"
+	"cli2tv/internal/mediasource"
+	"cli2tv/metadata"
+	"cli2tv/utils"
 )
 
 type Options struct {

@@ -14,13 +14,13 @@ import (
 	"strings"
 	"time"
 
-	"go2tv.app/go2tv/v2/internal/controller"
-	"go2tv.app/go2tv/v2/internal/library"
-	"go2tv.app/go2tv/v2/internal/mediaserver"
-	"go2tv.app/go2tv/v2/internal/playback"
-	"go2tv.app/go2tv/v2/internal/playbackadapter"
-	"go2tv.app/go2tv/v2/internal/webui"
-	"go2tv.app/go2tv/v2/utils"
+	"cli2tv/internal/controller"
+	"cli2tv/internal/library"
+	"cli2tv/internal/mediaserver"
+	"cli2tv/internal/playback"
+	"cli2tv/internal/playbackadapter"
+	"cli2tv/internal/webui"
+	"cli2tv/utils"
 )
 
 type runtime struct {

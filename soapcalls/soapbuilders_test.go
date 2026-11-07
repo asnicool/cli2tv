@@ -5,8 +5,8 @@ import (
 	"strings"
 	"testing"
 
-	"go2tv.app/go2tv/v2/metadata"
-	"go2tv.app/go2tv/v2/utils"
+	"cli2tv/metadata"
+	"cli2tv/utils"
 )
 
 func TestSetAVTransportSoapBuild(t *testing.T) {

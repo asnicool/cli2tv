@@ -3,7 +3,7 @@ package utils
 import (
 	"os"
 
-	"go2tv.app/go2tv/v2/internal/mediasource"
+	"cli2tv/internal/mediasource"
 )
 
 // mediaInput resolves progressive sources before any filesystem access.

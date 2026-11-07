@@ -22,7 +22,7 @@ import (
 	_ "golang.org/x/image/webp"
 	"golang.org/x/net/html"
 
-	"go2tv.app/go2tv/v2/metadata"
+	"cli2tv/metadata"
 )
 
 const (

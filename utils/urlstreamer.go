@@ -15,7 +15,7 @@ import (
 	"sync"
 	"time"
 
-	"go2tv.app/go2tv/v2/internal/radiometadata"
+	"cli2tv/internal/radiometadata"
 )
 
 var ErrBadStatus = errors.New("streamURL bad status code")

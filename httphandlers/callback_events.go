@@ -13,7 +13,7 @@ import (
 	"strings"
 	"sync"
 
-	"go2tv.app/go2tv/v2/soapcalls"
+	"cli2tv/soapcalls"
 )
 
 const MaxCallbackBody = 256 << 10

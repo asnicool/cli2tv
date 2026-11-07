@@ -12,7 +12,7 @@ import (
 	"strings"
 	"testing"
 
-	"go2tv.app/go2tv/v2/httphandlers"
+	"cli2tv/httphandlers"
 )
 
 func TestPrepareRegistersLocalAudioArtwork(t *testing.T) {

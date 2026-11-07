@@ -19,7 +19,7 @@ import (
 	"strings"
 	"time"
 
-	"go2tv.app/go2tv/v2/internal/radiometadata"
+	"cli2tv/internal/radiometadata"
 )
 
 const maxRadioPlaylistBytes = 1 << 20

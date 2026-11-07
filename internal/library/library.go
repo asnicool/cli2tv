@@ -16,7 +16,7 @@ import (
 	"unicode"
 	"unicode/utf8"
 
-	"go2tv.app/go2tv/v2/internal/mediamodel"
+	"cli2tv/internal/mediamodel"
 )
 
 const (

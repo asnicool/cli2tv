@@ -5,7 +5,7 @@ package mediasource
 import (
 	"net/http"
 
-	internal "go2tv.app/go2tv/v2/internal/mediasource"
+	internal "cli2tv/internal/mediasource"
 )
 
 // Source opens independent, cancellable readers and provides a seekable input URL.

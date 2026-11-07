@@ -19,8 +19,8 @@ import (
 	"golang.org/x/image/font/gofont/gomono"
 	"golang.org/x/time/rate"
 
-	"go2tv.app/go2tv/v2/internal/mediasource"
-	"go2tv.app/go2tv/v2/utils"
+	"cli2tv/internal/mediasource"
+	"cli2tv/utils"
 )
 
 // Inspect decoded pixels, rather than FFmpeg arguments: captions must actually
