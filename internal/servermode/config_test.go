@@ -117,3 +117,47 @@ func TestValidateConfig(t *testing.T) {
 		})
 	}
 }
+
+func TestValidateMediaArg(t *testing.T) {
+	t.Parallel()
+	tests := []struct {
+		name    string
+		args    []string
+		want    string
+		wantErr error
+	}{
+		{name: "no positional", want: ""},
+		{name: "single positional is media file", args: []string{"movie.mkv"}, want: "movie.mkv"},
+		{name: "multiple positionals rejected", args: []string{"a.mkv", "b.mkv"}, wantErr: ErrPositionalArguments},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			flags := flag.NewFlagSet("test", flag.ContinueOnError)
+			options := RegisterCLIFlags(flags)
+			flags.Bool("tc", false, "")
+			args := append([]string{"-tc"}, tt.args...)
+			if err := flags.Parse(args); err != nil {
+				t.Fatal(err)
+			}
+			got, err := options.ValidateMediaArg(flags)
+			if !errors.Is(err, tt.wantErr) {
+				t.Fatalf("ValidateMediaArg() error = %v, want %v", err, tt.wantErr)
+			}
+			if got != tt.want {
+				t.Fatalf("ValidateMediaArg() = %q, want %q", got, tt.want)
+			}
+		})
+	}
+}
+
+func TestValidateMediaArgKeepsServerFlagChecks(t *testing.T) {
+	t.Parallel()
+	flags := flag.NewFlagSet("test", flag.ContinueOnError)
+	options := RegisterCLIFlags(flags)
+	if err := flags.Parse([]string{"-listen", "127.0.0.1:1", "movie.mkv"}); err != nil {
+		t.Fatal(err)
+	}
+	if _, err := options.ValidateMediaArg(flags); !errors.Is(err, ErrServerFlagWithoutMode) {
+		t.Fatalf("ValidateMediaArg() error = %v, want %v", err, ErrServerFlagWithoutMode)
+	}
+}

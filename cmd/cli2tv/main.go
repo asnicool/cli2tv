@@ -101,19 +101,38 @@ func run(crash *crashlog.Session) error {
 	defer cancel()
 
 	flag.Parse()
-	if err := serverOptions.Validate(flag.CommandLine); err != nil {
-		return err
-	}
 	if serverOptions.Server {
+		if err := serverOptions.Validate(flag.CommandLine); err != nil {
+			return err
+		}
 		return servermode.Run(exitCTX, serverOptions.Config(version), os.Stdout)
 	}
-	flagRes, err := processflags()
+
+	mediaPositional, err := serverOptions.ValidateMediaArg(flag.CommandLine)
+	if err != nil {
+		return err
+	}
+	if err := applyPositionalMedia(mediaPositional); err != nil {
+		return err
+	}
+
+	autoDevice := *targetPtr == "" && !*listPtr && (*mediaArg != "" || *urlArg != "" || checkStdin())
+
+	flagRes, err := processflags(autoDevice)
 	if err != nil {
 		return err
 	}
 
 	if flagRes.exit {
 		return nil
+	}
+
+	if autoDevice {
+		deviceURL, err := autodetectDevice(exitCTX)
+		if err != nil {
+			return err
+		}
+		flagRes.targetURL = deviceURL
 	}
 
 	if crash != nil && crash.PreviousCrashPath() != "" {
@@ -578,7 +597,7 @@ func listFlagFunction() error {
 	return err
 }
 
-func processflags() (*flagResults, error) {
+func processflags(autoDevice bool) (*flagResults, error) {
 	res := &flagResults{}
 	if checkVerflag() {
 		res.exit = true
@@ -607,7 +626,7 @@ func processflags() (*flagResults, error) {
 		return res, nil
 	}
 
-	if err := checkVflag(); err != nil {
+	if err := checkVflag(autoDevice); err != nil {
 		return nil, fmt.Errorf("checkflags error: %w", err)
 	}
 
@@ -618,13 +637,13 @@ func processflags() (*flagResults, error) {
 	return res, nil
 }
 
-func checkVflag() error {
+func checkVflag(autoDevice bool) error {
 	if !*listPtr && *urlArg == "" {
-		if _, err := os.Stat(*mediaArg); os.IsNotExist(err) && !checkStdin() && *mediaArg != "-" {
+		if _, err := os.Stat(*mediaArg); os.IsNotExist(err) && *mediaArg != "" && *mediaArg != "-" {
 			return fmt.Errorf("checkVflags error: %w", err)
 		}
 
-		if *targetPtr == "" {
+		if *targetPtr == "" && !autoDevice {
 			return fmt.Errorf("checkVflags error: %w", errors.New("no target device specified with -t flag"))
 		}
 	}

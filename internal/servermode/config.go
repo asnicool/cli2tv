@@ -69,6 +69,27 @@ func RegisterCLIFlags(flags *flag.FlagSet) *CLIOptions {
 }
 
 func (o *CLIOptions) Validate(flags *flag.FlagSet) error {
+	return o.validateMode(flags, flags.Args())
+}
+
+// ValidateMediaArg behaves like Validate but permits exactly one positional
+// argument, which the CLI treats as a media file for auto-device casting.
+// It returns that argument, or an empty string when none was given.
+func (o *CLIOptions) ValidateMediaArg(flags *flag.FlagSet) (string, error) {
+	args := flags.Args()
+	switch {
+	case len(args) > 1:
+		return "", ErrPositionalArguments
+	case len(args) == 1:
+		if err := o.validateMode(flags, nil); err != nil {
+			return "", err
+		}
+		return args[0], nil
+	}
+	return "", o.validateMode(flags, nil)
+}
+
+func (o *CLIOptions) validateMode(flags *flag.FlagSet, args []string) error {
 	var legacy []string
 	serverOptionSet := false
 	flags.Visit(func(visited *flag.Flag) {
@@ -81,7 +102,7 @@ func (o *CLIOptions) Validate(flags *flag.FlagSet) error {
 			legacy = append(legacy, "-"+visited.Name)
 		}
 	})
-	return ValidateCLI(o.Server, serverOptionSet, o.MediaRoots, o.AllowedOrigins, legacy, flags.Args())
+	return ValidateCLI(o.Server, serverOptionSet, o.MediaRoots, o.AllowedOrigins, legacy, args)
 }
 
 func (o *CLIOptions) Config(version string) Config {
