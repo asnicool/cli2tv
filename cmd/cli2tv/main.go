@@ -116,6 +116,18 @@ func run(crash *crashlog.Session) error {
 		return err
 	}
 
+	if root, ok := browserRequest(checkStdin()); ok {
+		selection, err := runBrowser(root)
+		if err != nil {
+			return err
+		}
+		if selection == nil {
+			return nil
+		}
+		*mediaArg = selection.mediaPath
+		*targetPtr = selection.device.Addr
+	}
+
 	autoDevice := *targetPtr == "" && !*listPtr && (*mediaArg != "" || *urlArg != "" || checkStdin())
 
 	flagRes, err := processflags(autoDevice)
