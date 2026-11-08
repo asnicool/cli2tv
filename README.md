@@ -11,23 +11,29 @@ Play "movie.mkv" on [LG] webOS TV OLED55C21LA (DLNA) [http://192.168.1.75:1152/]
 Selected [LG] webOS TV OLED55C21LA (DLNA) [http://192.168.1.75:1152/]
 ```
 
+![cli2tv asking to play a file on an autodetected TV](assets/cli2tv-autodetect.png)
+
 ```console
 $ cli2tv
-Cast from /home/you/Videos
+Cast from .
 
-▸ documentaries/
-  holiday.mp4
-  song.flac
+▸ Documentaries/
+  Home movies/
+  Big Buck Bunny.mp4
+  Koyaanisqatsi.mkv
+  ambient set.flac
+  podcast ep 42.mp3
+  road trip 2025.mp4
 
 player: [LG] webOS TV OLED55C21LA
 up/down: select · enter: play/open · esc: back/quit · q: quit
 ```
 
+![cli2tv media browser with a discovered TV](assets/cli2tv-browser.png)
+
 Give it a file and it finds the first player on your network, asks for confirmation, and plays. Answer `n` and it moves on to the next discovered player; `q` aborts. No `-t`, no `-l`, no copy-pasting device URLs.
 
 The last confirmed player is remembered in `~/.cache/cli2tv/` and probed first on the next run — if it's still up, the confirmation appears instantly instead of waiting for discovery.
-
-Run it with no argument (or with a directory) and a browser opens instead:
 
 ---
 
